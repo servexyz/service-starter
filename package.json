@@ -13,11 +13,12 @@
     "@babel/core": "^7.0.0-beta.39",
     "@babel/node": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
-    "ava": "^1.0.0-beta.1"
+    "ava": "^1.0.0-beta.1",
+    "micro-dev": "^2.2.0"
   },
   "scripts": {
     "test": "ava",
-    "dev": "babel-node index.js",
+    "dev": "micro-dev index.js",
     "build": "babel -d ./build ./index.js -s",
     "clean": "rm -Rf ./build",
     "pre": "npm run clean && npm run build",

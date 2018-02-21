@@ -2,7 +2,8 @@
 
 ## v0.5.0
 
-* [ ] Add docker
-* [ ] Add micro
+* [x] Add docker
+* [x] Add micro
 * [ ] Add micro-router
 * [ ] Add now secrets
+  * [ ] Add [now-env](https://www.npmjs.com/package/now-env)
