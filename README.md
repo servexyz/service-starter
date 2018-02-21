@@ -4,13 +4,13 @@
 
 ## Getting Started
 
-**Install**
+### Install
 
 ```bash
 git clone https://github.com/servexyz/service-starter
 ```
 
-## Running
+### Use
 
 **Test**
 
