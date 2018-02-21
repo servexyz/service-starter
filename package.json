@@ -17,11 +17,11 @@
     "micro-dev": "^2.2.0"
   },
   "scripts": {
+    "start": "micro",
     "test": "ava",
     "dev": "npm run dev:built",
     "dev:raw": "micro-dev index.js",
     "dev:built": "npm run clean && npm run build && micro-dev build/index.js",
-    "start": "micro",
     "build": "babel -d ./build ./index.js -s",
     "clean": "rm -Rf ./build",
     "pre": "npm run clean && npm run build",

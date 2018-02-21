@@ -7,7 +7,7 @@
 **Install**
 
 ```bash
-
+git clone https://github.com/servexyz/service-starter
 ```
 
 **Execute CLI**
