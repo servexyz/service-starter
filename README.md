@@ -54,5 +54,14 @@ npm run docker:start
 
 ## Related
 
+## Related
+
+**Internal**
+
 * [@servexyz/cli-starter](https://github.com/servexyz/cli-starter)
 * [@servexyz/npm-starter](https://github.com/servexyz/npm-starter)
+
+**External**
+
+* [@zeit/micro](https://github.com/zeit/micro)
+* [@pedronauck/microrouter](https://github.com/pedronauck/micro-router)
