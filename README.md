@@ -10,16 +10,36 @@
 git clone https://github.com/servexyz/service-starter
 ```
 
-**Execute CLI**
+## Running
+
+**Test**
+
+```bash
+npm run test
+```
+
+**Execute `micro` CLI**
 
 ```bash
 npm start
 ```
 
-**Test CLI**
+**Execute `micro-dev` CLI**
 
 ```bash
-npm run test
+npm run dev
+```
+
+**Build Dockerfile and run Docker image**
+
+```bash
+npm run docker:execute
+```
+
+**Compile, build Dockerfile and run Docker image**
+
+```bash
+npm run docker:start
 ```
 
 ---
