@@ -18,13 +18,15 @@
   },
   "scripts": {
     "test": "ava",
-    "dev": "micro-dev index.js",
+    "dev": "npm run dev:built",
+    "dev:raw": "micro-dev index.js",
+    "dev:built": "npm run clean && npm run build && micro-dev build/index.js",
+    "start": "micro",
     "build": "babel -d ./build ./index.js -s",
     "clean": "rm -Rf ./build",
     "pre": "npm run clean && npm run build",
-    "start": "npm run pre && node ./build",
     "docker:build": "docker build -t service-starter .",
-    "docker:run": "docker run -d -p 8080:8081 service-starter",
+    "docker:run": "docker run -d -p 8080:3000 service-starter",
     "docker:execute": "npm run docker:build && npm run docker:run",
     "docker:start": "npm run build && npm run docker:execute"
   },
@@ -41,6 +43,7 @@
     ]
   },
   "dependencies": {
-    "micro": "^9.1.0"
+    "micro": "^9.1.0",
+    "microrouter": "^3.0.0"
   }
 }
