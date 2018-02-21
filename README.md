@@ -1,6 +1,6 @@
 # Service-Starter
 
-> Microservices utilizing micro, babel, ava
+> Microservices utilizing micro, microrouter, babel, ava
 
 ## Getting Started
 
