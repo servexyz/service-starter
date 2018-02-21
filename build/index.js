@@ -1,2 +1,7 @@
-console.log("hi");
+const micro = require("micro");
+
+const server = micro(async (req, res) => {
+  return "Welcome";
+});
+server.listen(8081);
 //# sourceMappingURL=index.js.map
