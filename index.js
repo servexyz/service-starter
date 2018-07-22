@@ -10,6 +10,11 @@ module.exports = router(
   get("/hello/:who", hello),
   get("/*", notfound)
 );
+/* 
+  ! NOTE: "/*" is not an exact match. 
+  ! Meaning, notfound path must be last. 
+  ! If first, it will prevent all other routes from being identified
+*/
 
 /* eg. 
 Dev: http://localhost:3000/hello/alec
