@@ -1,11 +1,15 @@
 const { send } = require("micro");
 const { router, get } = require("microrouter");
 
+const root = (req, res) => send(res, 200, "Running");
 const hello = (req, res) => send(res, 200, `Hello ${req.params.who}`);
-
 const notfound = (req, res) => send(res, 404, "No route found");
 
-module.exports = router(get("/hello/:who", hello), get("/*", notfound));
+module.exports = router(
+  get("/", root),
+  get("/hello/:who", hello),
+  get("/*", notfound)
+);
 
 /* eg. 
 Dev: http://localhost:3000/hello/alec
