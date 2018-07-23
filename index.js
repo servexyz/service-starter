@@ -1,6 +1,8 @@
 const { send } = require("micro");
 const { router, get } = require("microrouter");
 
+console.log(`This is an environment ${process.env.thing}`);
+
 const root = (req, res) => send(res, 200, "Running");
 const hello = (req, res) => send(res, 200, `Hello ${req.params.who}`);
 const notfound = (req, res) => send(res, 404, "No route found");

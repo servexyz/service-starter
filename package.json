@@ -17,7 +17,7 @@
     "micro-dev": "^2.2.0"
   },
   "scripts": {
-    "start": "micro -p 60123",
+    "start": "micro -l tcp://0.0.0.0:${PORT-60123}",
     "test": "ava",
     "dev": "npm run dev:built",
     "dev:raw": "micro-dev -p 60123 index.js",
@@ -31,6 +31,9 @@
     "docker:start": "npm run build && npm run docker:execute"
   },
   "babel": {
+    "plugins": [
+      "inline-dotenv"
+    ],
     "presets": [
       [
         "@babel/preset-env",
@@ -43,6 +46,7 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-inline-dotenv": "^1.1.2",
     "micro": "^9.1.0",
     "microrouter": "^3.0.0"
   }
