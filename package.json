@@ -17,16 +17,16 @@
     "micro-dev": "^2.2.0"
   },
   "scripts": {
-    "start": "micro",
+    "start": "micro -p 60123",
     "test": "ava",
     "dev": "npm run dev:built",
-    "dev:raw": "micro-dev index.js",
-    "dev:built": "npm run clean && npm run build && micro-dev build/index.js",
+    "dev:raw": "micro-dev -p 60123 index.js",
+    "dev:built": "npm run clean && npm run build && micro-dev -p 60123 build/index.js",
     "build": "babel -d ./build ./index.js -s",
     "clean": "rm -Rf ./build",
     "pre": "npm run clean && npm run build",
     "docker:build": "docker build -t service-starter .",
-    "docker:run": "docker run -d -p 8080:3000 service-starter",
+    "docker:run": "docker run -d -p 8080:60123 service-starter",
     "docker:execute": "npm run docker:build && npm run docker:run",
     "docker:start": "npm run build && npm run docker:execute"
   },
@@ -36,7 +36,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "9.3.0"
+            "node": "current"
           }
         }
       ]
